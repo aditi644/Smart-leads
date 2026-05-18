@@ -28,6 +28,20 @@ app.get('/api/health', (_req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/leads', leadRoutes);
 
+
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Serve frontend static files
+const publicPath = path.join(__dirname, '..', 'public');
+app.use(express.static(publicPath));
+
+// All non-API routes serve index.html (React Router support)
+app.get('*', (req, res) => {
+  if (!req.path.startsWith('/api')) {
+    res.sendFile(path.join(publicPath, 'index.html'));
+  }
+});
 // ─── 404 & Error Handlers ────────────────────────────────────────────────────
 app.use(notFound);
 app.use(errorHandler);
