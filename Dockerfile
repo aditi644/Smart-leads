@@ -7,7 +7,7 @@ COPY frontend/package*.json ./
 RUN npm install
 
 COPY frontend/ ./
-RUN npm run build
+RUN npx vite build --outDir /frontend/dist --emptyOutDir
 
 # ── Stage 2: Build Backend ────────────────────────────────────────────────────
 FROM node:20-alpine AS backend-builder
