@@ -3,17 +3,17 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Install frontend deps and build
-COPY ../frontend/package*.json ./frontend/
+COPY ../frontend/package*.json ../frontend/
 RUN cd frontend && npm install
 
-COPY ../frontend ./frontend
+COPY ../frontend ../frontend
 RUN cd frontend && npm run build
 
 # Install backend deps and build
-COPY ../backend/package*.json ./backend/
+COPY ../backend/package*.json ../backend/
 RUN cd backend && npm install
 
-COPY ../backend ./backend
+COPY ../backend ../backend
 RUN cd backend && npm run build
 
 # Production stage
