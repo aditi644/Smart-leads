@@ -10,10 +10,10 @@ COPY ../frontend ./frontend
 RUN cd frontend && npm run build
 
 # Install backend deps and build
-COPY backend/package*.json ./backend/
+COPY ../backend/package*.json ./backend/
 RUN cd backend && npm install
 
-COPY backend ./backend
+COPY ../backend ./backend
 RUN cd backend && npm run build
 
 # Production stage
