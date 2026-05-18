@@ -221,19 +221,4 @@ FRONTEND_URL    = *
 
 > Uses [MongoDB Atlas](https://www.mongodb.com/atlas) (free tier) as the cloud database.
 
----
 
-## 👤 Author
-
-**[Your Name]**
-- 📧 [your.email@example.com](mailto:your.email@example.com)
-- 💼 [LinkedIn](https://linkedin.com/in/yourprofile)
-- 🐙 [GitHub](https://github.com/yourusername)
-
----
-
-<div align="center">
-
-Built for the **ServiceHive Full Stack Internship Assignment**
-
-</div>
