@@ -404,8 +404,3 @@ Validation errors (`422`):
 - [x] `.env.example` files provided
 - [x] README with full setup + API docs
 
----
-
-## Author
-
-Built for the ServiceHive Full Stack Internship Assignment.
